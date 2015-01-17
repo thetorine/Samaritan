@@ -31,7 +31,7 @@
             android:summary="thetorine"
             android:title="Created By" />
         <Preference
-            android:summary="v1.0"
+            android:summary="v1.1"
             android:title="Version" />
     </PreferenceCategory>
 

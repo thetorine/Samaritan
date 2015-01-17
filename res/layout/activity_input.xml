@@ -60,6 +60,19 @@
         		android:layout_toEndOf="@id/displayButton"
         		android:layout_toRightOf="@id/displayButton"
         		android:onClick="onClick"/>
+    		
+    		<CheckBox
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/loop"
+    		    android:id="@+id/selectLoop"
+        		android:layout_toEndOf="@id/clearButton"
+        		android:layout_toRightOf="@id/clearButton"
+        		android:onClick="onClick"
+        		android:layout_alignTop="@id/clearButton"
+        		android:layout_marginTop="8dp"
+        		android:layout_marginLeft="5dp">
+    		</CheckBox>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
     

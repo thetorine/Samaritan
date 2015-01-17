@@ -23,7 +23,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
@@ -32,10 +31,10 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class InputActivity extends ActionBarActivity {
@@ -184,10 +183,15 @@ public class InputActivity extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String s = listView.getItemAtPosition(position).toString();
                 EditText editText = (EditText)findViewById(R.id.inputText);
-                editText.setText(s);
-
-                Button b = (Button)findViewById(R.id.displayButton);
-                onClick(b);
+                CheckBox checkBox = (CheckBox)findViewById(R.id.selectLoop);
+                if(checkBox.isChecked()) {
+                	String text = (editText.getText().length() > 0 ? editText.getText().toString() + "-" + s : s);
+                	editText.setText(text);
+                } else {
+                	editText.setText(s);
+                	Button b = (Button)findViewById(R.id.displayButton);
+                    onClick(b);
+                }
             }
         });
         setListViewHeightBasedOnChildren(listView);

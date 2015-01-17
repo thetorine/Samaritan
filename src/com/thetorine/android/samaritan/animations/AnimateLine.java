@@ -1,6 +1,5 @@
 package com.thetorine.android.samaritan.animations;
 
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
@@ -33,7 +32,6 @@ public class AnimateLine extends Animation {
             animatingView.getLayoutParams().width = newWidth;
             animatingView.requestLayout();
         }
-        Log.d("Samaritan", Integer.toString(newWidth));
     }
 
     @Override

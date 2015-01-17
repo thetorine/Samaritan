@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Surface;
 import android.view.View;
 import android.view.WindowManager;
@@ -23,8 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TextActivity extends Activity implements Runnable {
-    private List<String> mWords = new ArrayList<String>();
+    private List<List<String>> mWords = new ArrayList<List<String>>();
     private int mWordIndex;
+    private int loopIndex = -1;
     private Handler mHandler = new Handler();
     private boolean mDestroyed;
     private boolean mRun;
@@ -59,7 +61,7 @@ public class TextActivity extends Activity implements Runnable {
         DynamicTextView tv = (DynamicTextView) findViewById(R.id.displayText);
         ImageView iv = (ImageView) findViewById(R.id.imageView);
         if(mRun) {
-            if(mWordIndex < mWords.size()) {
+            if(mWordIndex < mWords.get(loopIndex).size()) {
                changeText(tv);
                animateLine();
             } else {
@@ -87,7 +89,7 @@ public class TextActivity extends Activity implements Runnable {
         switch(animation) {
             case 0: {
                 DynamicTextView tv = (DynamicTextView) findViewById(R.id.displayText);
-                String word = mWords.get(mWordIndex);
+                String word = mWords.get(loopIndex).get(mWordIndex);
 
                 AnimateText animateText = new AnimateText(tv, word);
                 animateText.setDuration(getDisplayTime());
@@ -190,9 +192,19 @@ public class TextActivity extends Activity implements Runnable {
                 	if(line.getAnimation() != null) {
                 		if(line.getAnimation().hasEnded()) {
                 			mRun = true;
+                			loopIndex++;
+                			if(loopIndex == mWords.size()) {
+                				loopIndex = 0;
+                			}
+                			mWordIndex = 0;
                 		} 
                 	} else {
                 		mRun = true;
+                		loopIndex++;
+            			if(loopIndex == mWords.size()) {
+            				loopIndex = 0;
+            			}
+            			mWordIndex = 0;
                 	}
                 }
             }
@@ -219,19 +231,25 @@ public class TextActivity extends Activity implements Runnable {
      * @param text the text to parse.
      */
     public void parseText(String text) {
-        for(String s : text.toUpperCase().split(" ")) {
-            s = " " + s + " ";
-            if(s.contains("?")) {
-                mWords.add(s.replace("?", ""));
-                mWords.add(" ? ");
-            } else if(s.contains("!")) {
-                mWords.add(s.replace("!", ""));
-                mWords.add(" ! ");
-            } else {
-                mWords.add(s);
-            }
+        String[] loops = text.split("-");
+        for(String s : loops) {
+        	Log.d("safgsagasg", s);
+        	List<String> allWords = new ArrayList<String>();
+        	for(String w : s.toUpperCase().split(" ")) {
+        		w = " " + w + " ";
+        		if(w.contains("?")) {
+        			allWords.add(w.replace("?", ""));
+        			allWords.add(" ? ");
+        		} else if(w.contains("!")) {
+        			allWords.add(w.replace("!", ""));
+        			allWords.add(" ! ");
+        		} else {
+        			allWords.add(w);
+        		}
+        	}
+        	allWords.add("   ");
+    		mWords.add(allWords);
         }
-        mWords.add("   ");
     }
     
     /**

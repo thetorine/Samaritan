@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="trig_size">38dp</dimen>
+    <dimen name="elevation">10dp</dimen>
+    <dimen name="textSize">45sp</dimen>
+    <dimen name="barThickness">2dp</dimen>
+</resources>

@@ -1,0 +1,117 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <LinearLayout 
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical">
+    	
+        <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_card"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp"
+        android:elevation="5dp">
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+  		 	android:layout_height="match_parent"
+    		android:padding="@dimen/activity_horizontal_margin">
+            
+   			<TextView
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+       			android:text="@string/enter_text"
+        		android:textSize="20dp"
+        		android:id="@+id/welcome" />
+
+    		<Button
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="@string/display"
+        		android:id="@+id/displayButton"
+        		android:onClick="onClick"
+        		android:layout_below="@+id/inputText"
+        		android:layout_alignParentStart="true" 
+        		android:layout_alignParentLeft="true"
+        		/>
+
+    		<EditText
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:id="@+id/inputText"
+        		android:layout_below="@+id/welcome"
+        		android:layout_alignParentStart="true"
+        		android:layout_alignParentLeft="true"
+        		android:paddingTop="15dp" 
+        		android:hint="@string/text_to_display"/>
+
+    		<Button
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="@string/clear"
+        		android:id="@+id/clearButton"
+        		android:layout_alignBottom="@id/displayButton"
+        		android:layout_toEndOf="@id/displayButton"
+        		android:layout_toRightOf="@id/displayButton"
+        		android:onClick="onClick"/>
+    		
+    		<CheckBox
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/loop"
+    		    android:id="@+id/selectLoop"
+        		android:layout_toEndOf="@id/clearButton"
+        		android:layout_toRightOf="@id/clearButton"
+        		android:onClick="onClick"
+        		android:layout_alignTop="@id/clearButton"
+        		android:layout_marginTop="8dp"
+        		android:layout_marginLeft="5dp">
+    		</CheckBox>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/quotes_card"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp"
+        android:elevation="5dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+  		 	android:layout_height="match_parent"
+    		android:padding="@dimen/activity_horizontal_margin">
+    		
+            <TextView
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="@string/quotes"
+        		android:id="@+id/quotes"
+        		android:layout_alignParentStart="true"
+        		android:layout_alignParentLeft="true"
+        		android:textSize="20dp"/>
+
+    		<ListView
+    		    android:id="@+id/phrases"
+    		    android:layout_width="match_parent"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignStart="@id/quotes"
+    		    android:layout_alignLeft="@id/quotes"
+    		    android:layout_below="@+id/quotes"
+    		    android:paddingTop="10dp"
+    		    android:smoothScrollbar="true" >
+    		</ListView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView><!-- From: file:/Volumes/Stuff/programming/Samaritan/samaritan/src/main/res/layout/activity_input.xml -->

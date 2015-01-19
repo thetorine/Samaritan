@@ -1,0 +1,5 @@
+<resources>
+    <color name="black_overlay">#66000000</color>
+    <color name="action_bar">#3D3D3D</color>
+    <color name="status_bar">#1A1A1A</color>
+</resources>

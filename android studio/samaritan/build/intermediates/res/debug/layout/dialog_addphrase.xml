@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+    	android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_phrase_field"
+        android:hint="@string/add_phrase"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="15dp"/>
+</LinearLayout>
+<!-- From: file:/Volumes/Stuff/programming/Samaritan/samaritan/src/main/res/layout/dialog_addphrase.xml -->

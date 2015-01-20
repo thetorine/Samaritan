@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Samaritan</string>
+    
+    <string name="action_add">Add Phrase</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="title_activity_text">TextActivity</string>
+    <string name="enter_text">Enter Message:</string>
+    <string name="display">Display</string>
+    <string name="clear">Clear</string>
+    <string name="quotes">Saved Messages</string>
+    <string name="text_to_display">Text to Display</string>
+    <string name="add_phrase">Enter Phrase</string>
+    <string name="delete_phrase">Delete Phrase</string>
+    <string name="loop">Loop Text</string>
+</resources>

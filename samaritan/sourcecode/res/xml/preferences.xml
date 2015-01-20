@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="User Interface" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_theme"
+            android:summary="Use a black background when playing text."
+            android:title="Black Theme" />
+         <EditTextPreference 
+            android:defaultValue="500"
+            android:key="pref_textDisplayLength"
+            android:positiveButtonText="Ok"
+            android:negativeButtonText="Cancel"
+            android:summary="Set the time for each word to be displayed on screen. (in ms)"
+            android:title="Text Display Length"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_triangleStatus"
+            android:summary="Hide the triangle before the text begins to play."
+            android:title="Hide Triangle" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_transitionText"
+            android:summary="While on, the text will animate its transparency from 0% to 100% at the start of each word."
+            android:title="Transition Text" />
+        <CheckBoxPreference 
+            android:defaultValue="false"
+            android:key="pref_landscape"
+            android:title="Landscape Mode"/>
+    </PreferenceCategory>
+     
+    <PreferenceCategory android:title="About" >
+        <Preference
+            android:summary="thetorine"
+            android:title="Created By" />
+        <Preference
+            android:summary="v1.1"
+            android:title="Version" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

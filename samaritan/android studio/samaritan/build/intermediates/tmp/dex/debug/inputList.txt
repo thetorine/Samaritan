@@ -1,6 +1,0 @@
-/Volumes/Stuff/programming/Samaritan/samaritan/build/intermediates/classes/debug
-/Volumes/Stuff/programming/Samaritan/samaritan/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-3bf24965bfb62bb380edf46d0a2860c80a6ae62e.jar
-/Volumes/Stuff/programming/Samaritan/samaritan/build/intermediates/pre-dexed/debug/classes-4a8aeabf15f83e6951b5cd22939204cd2bcb3300.jar
-/Volumes/Stuff/programming/Samaritan/samaritan/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-c5a70e7fc042d9b8df3fdaba02e87b198ce04d7b.jar
-/Volumes/Stuff/programming/Samaritan/samaritan/build/intermediates/pre-dexed/debug/classes-1528c6c0ada96b03511cbc38ab2cd9f9f43841b2.jar
-/Volumes/Stuff/programming/Samaritan/samaritan/build/intermediates/pre-dexed/debug/classes-c7f6ec053bb6f8f1cdd0283509a10aae6169c724.jar
